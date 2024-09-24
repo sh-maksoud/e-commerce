@@ -429,8 +429,6 @@ const ITEMS_PER_PAGE = 10;
 
 const Shop = () => {
   const { category } = useParams();
-  console.log("Current Category: ", category); // Add this line to see the current category in console
-
   const { products, fetchProducts, categories, fetchCategories, addToCart } = useStore((state) => ({
     products: state.products,
     fetchProducts: state.fetchProducts,
