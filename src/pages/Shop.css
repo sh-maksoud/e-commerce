@@ -221,7 +221,7 @@ h1 {
   .product-item .add-to-cart {
     font-size: 0.9rem;
     margin-bottom: 50%;
-    
+
   }
   
 
@@ -302,6 +302,7 @@ h1 {
     /* left: 50%;  */
     /* right: 10px;  */
     border-radius: 4px; /* Maintain the same border radius */
+    margin-bottom: 50%;
   }
   
   /* Adjusting the visibility of the Add to Cart button on hover */
