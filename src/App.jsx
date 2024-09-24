@@ -17,7 +17,7 @@ import SignUp from './components/SignUp/SignUp';
 import UserProfile from './pages/UserProfile/UserProfile'; 
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import useThemeStore from './store/useThemeStore'; 
-import './app.css';
+import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
