@@ -223,7 +223,7 @@ h1 {
 
   .add-to-cart {
     font-size: 0.9rem; /* Adjust button font size */
-    margin-bottom: 200px; /* Adjusted for spacing */
+    margin-bottom: 80px; /* Adjusted for spacing */
     padding: 8px; /* Smaller padding */
     border-radius: 4px; /* Maintain the same border radius */
   }
