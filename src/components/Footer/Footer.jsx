@@ -16,17 +16,17 @@ const Footer = () => {
         <nav className="footer-nav">
           <ul className="footer-nav-list">
             <li>Links</li>
-            <li className="footer-nav-item"><a href="/">Home</a></li>
-            <li className="footer-nav-item"><a href="/shop">Shop</a></li>
-            <li className="footer-nav-item"><a href="/about">About</a></li>
-            <li className="footer-nav-item"><a href="/contact">Contact</a></li>
+            <li className="footer-nav-item"><a href=".">Home</a></li> {/* Change "/" to "." */}
+            <li className="footer-nav-item"><a href="shop">Shop</a></li> {/* Remove leading slash */}
+            <li className="footer-nav-item"><a href="about">About</a></li> {/* Remove leading slash */}
+            <li className="footer-nav-item"><a href="contact">Contact</a></li> {/* Remove leading slash */}
           </ul>
           
           <ul className="footer-nav-list">
             <li>Help</li>
-            <li className="footer-nav-item"><a href="/payment">Payment Options</a></li>
-            <li className="footer-nav-item"><a href="/returns">Returns</a></li>
-            <li className="footer-nav-item"><a href="/privacy">Privacy Policies</a></li>
+            <li className="footer-nav-item"><a href="payment">Payment Options</a></li> {/* Remove leading slash */}
+            <li className="footer-nav-item"><a href="returns">Returns</a></li> {/* Remove leading slash */}
+            <li className="footer-nav-item"><a href="privacy">Privacy Policies</a></li> {/* Remove leading slash */}
           </ul>
         </nav>
         
@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
       
       <hr className="footer-divider" />
-      <p className="footer-rights">© 2023 <a className="footer-link" href="/">TrendElite</a> . All rights reserved.</p>
+      <p className="footer-rights">© 2023 <a className="footer-link" href=".">TrendElite</a> . All rights reserved.</p> {/* Change "/" to "." */}
     </footer>
   );
 };

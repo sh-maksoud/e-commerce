@@ -51,6 +51,9 @@
 .footer-nav-item a:hover {
   font-weight: bold;
 }
+/* .footer-nav-item a:hover { 
+  color: #f7a600; 
+} */
 
 .footer-newsletter {
   display: flex;
@@ -128,9 +131,6 @@
   color: #fff;
 }
 
-/* .dark-mode .footer-nav-list { 
-  color: #fff;    
-} */
 
 .dark-mode .footer-nav-item a:hover { 
   color: #f7a600; 
