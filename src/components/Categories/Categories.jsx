@@ -21,10 +21,12 @@ const Categories = ({ categories }) => {
         <div className="categories-grid">
           {categories && categories.length > 0 ? (
             categories.map((category, index) => {
-              const imageSrc = categoryImages[category] || defaultImage;
+              const normalizedCategory = category.toLowerCase();
+              const imageSrc = categoryImages[normalizedCategory] || defaultImage;
+              
               return (
                 <div key={index} className="category-item">
-                  <a href={`/shop/${category.replace(/ /g, '-').toLowerCase()}`}>
+                  <a href={`/shop/${normalizedCategory.replace(/ /g, '-').toLowerCase()}`}>
                     <div className="category-content">
                       <img
                         src={imageSrc}

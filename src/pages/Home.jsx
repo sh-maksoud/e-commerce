@@ -20,13 +20,13 @@ const Home = () => {
     const fetchData = async () => {
       try {
         await fetchProducts();
-        await fetchCategories(); 
+        await fetchCategories();
         const response = await fetch('https://fakestoreapi.com/products/categories');
         const data = await response.json();
         setCategories(data);
       } catch (error) {
         console.error('Error fetching data:', error);
-        setCategories([]);
+        setCategories([]); 
       }
     };
 
@@ -64,36 +64,41 @@ const Home = () => {
     <div className={isDarkMode ? 'dark-mode' : ''}>
       <Header />
       <Categories categories={categories} />
+      
       <div className="carousel-section">
         <h2>Featured Products</h2>
-        <Slider {...carouselSettings}>
-          {products.map((product) => (
-            <motion.div
-              key={product.id}
-              className="carousel-item"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 * product.id, duration: 0.5 }}
-            >
-              <Link to={`/product/${product.id}`}>
-                <motion.img 
-                  src={product.image} 
-                  alt={product.title} 
-                  whileHover={{ scale: 1.05 }} 
-                  className="carousel-image"
-                />
-              </Link>
-              <Link to={`/product/${product.id}`}>
-                <motion.p
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {product.title}
-                </motion.p>
-              </Link>
-            </motion.div>
-          ))}
-        </Slider>
+        {products.length > 0 ? (
+          <Slider {...carouselSettings}>
+            {products.map((product) => (
+              <motion.div
+                key={product.id}
+                className="carousel-item"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 * product.id, duration: 0.5 }}
+              >
+                <Link to={`/product/${product.id}`}>
+                  <motion.img 
+                    src={product.image} 
+                    alt={product.title} 
+                    whileHover={{ scale: 1.05 }} 
+                    className="carousel-image"
+                  />
+                </Link>
+                <Link to={`/product/${product.id}`}>
+                  <motion.p
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {product.title}
+                  </motion.p>
+                </Link>
+              </motion.div>
+            ))}
+          </Slider>
+        ) : (
+          <p>No products available at the moment.</p>
+        )}
       </div>
     </div>
   );
