@@ -1,7 +1,7 @@
 
 import './Categories.css';
 import men from '../../assets/men.jpeg';
-import women from '../../assets/women.jpeg';
+import women from '../../../public/women.jpeg';
 import jewelery from '../../assets/jewelery.jpeg';
 import electronics from '../../assets/electronics.jpeg'; 
 import defaultImage from '../../assets/default-image.jpeg';
