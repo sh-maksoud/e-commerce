@@ -124,8 +124,16 @@
   color: #fff; 
 }
 
-.dark-mode .footer-nav-list {
+.dark-mode .footer-nav-item a {
   color: #fff;
+}
+
+/* .dark-mode .footer-nav-list { 
+  color: #fff;    
+} */
+
+.dark-mode .footer-nav-item a:hover { 
+  color: #f7a600; 
 }
 
 .dark-mode .newsletter-input,
