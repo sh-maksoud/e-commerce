@@ -220,6 +220,8 @@ h1 {
 
   .product-item .add-to-cart {
     font-size: 0.9rem;
+    margin-bottom: 50%;
+    
   }
   
 
@@ -254,8 +256,8 @@ h1 {
   .add-to-cart {
     font-size: 0.8rem;
     position: relative;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
   }
 }
 
@@ -277,3 +279,35 @@ h1 {
 
 
 
+@media (max-width: 400px) {
+  .product-item {
+    width: calc(100% - 20px); /* Full width with some margin */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .product-item h2 {
+    font-size: 0.9rem; /* Smaller font size for titles */
+  }
+
+  .product-item p:first-of-type,
+  .product-item p:last-of-type {
+    font-size: 0.8rem; /* Smaller font size for text */
+  }
+
+  .add-to-cart {
+    font-size: 0.8rem; /* Adjust button font size */
+    padding: 8px; /* Smaller padding */
+    position: relative;
+    bottom: 70%; /* Adjust position */
+    /* left: 50%;  */
+    /* right: 10px;  */
+    border-radius: 4px; /* Maintain the same border radius */
+  }
+  
+  /* Adjusting the visibility of the Add to Cart button on hover */
+  .product-item:hover .add-to-cart {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Slightly faster transition */
+  }
+}
