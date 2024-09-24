@@ -409,5 +409,10 @@
   .add-to-cart-button { /* Ensure consistent sizing */
     width: 100%; /* Full width */
     padding: 12px; /* Consistent padding */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
   }
 }
