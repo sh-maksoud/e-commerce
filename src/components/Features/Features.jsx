@@ -1,6 +1,6 @@
 
 
-import './features.css';
+import './Features.css';
 
 import trophy from '../../assets/trophy.png';
 import guarantee from '../../assets/guarantee.png';
