@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useStore from '../../../store/useStore';
 import animation from '../../../assets/Animation.mp4';
-import './sidebar.css';
+import './Sidebar.css';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar, cart, removeFromCart } = useStore();
