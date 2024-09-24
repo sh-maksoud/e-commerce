@@ -77,7 +77,7 @@ const Sidebar = () => {
             <p>${calculateTotal()}</p>
           </div>
           <div className="cart-actions">
-            <Link to="/checkout" className="btn-proceed">Proceed to Checkout</Link>
+            {/* <Link to="/checkout" className="btn-proceed">Proceed to Checkout</Link> */}
             <Link to="/shop" className="btn-shop">Back to Shop</Link>
           </div>
         </div>

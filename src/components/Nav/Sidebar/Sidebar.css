@@ -27,11 +27,13 @@
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  width: 100%; /* Ensures that the quantity and price are aligned */
 }
 
 .item-price {
   font-weight: bold;
   color: #28a745;
+  min-width: 80px; /* Set a minimum width for consistent alignment */
 }
 
 .remove-button {
@@ -65,23 +67,28 @@
 
 .cart-actions {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
-.btn-proceed, .btn-shop {
-  display: block;
+.btn-proceed,
+.btn-shop {
+  flex: 1;
   padding: 10px;
-  margin-top: 10px;
+  margin: 5px; /* Adjusted margin for spacing between buttons */
   text-align: center;
   background-color: #f7a600;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  height: 40px; /* Fixed height for buttons */
 }
 
-.btn-proceed:hover, .btn-shop:hover {
+.btn-proceed:hover,
+.btn-shop:hover {
   background-color: #e69500;
 }
 
@@ -108,22 +115,56 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode .sidebar {
+  background-color: #333;
+  color: #fff;
+}
 
+.dark-mode .cart-item {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .remove-button {
+  background-color: #ff5c5c;
+}
+
+/* Responsive Styles */
 @media (max-width: 767px) {
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     background-color: transparent;
     border-radius: 0;
     border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .cart-item-details {
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+
+  .item-title {
+    font-size: 1em;
   }
 
   .item-quantity-price {
     width: 100%;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 5px;
+  }
+
+  .item-price {
+    font-size: 0.9em;
+  }
+
+  .remove-button {
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+    margin-top: 5px;
   }
 
   .subtotal {
@@ -139,15 +180,23 @@
     justify-content: space-between;
   }
 
-  .remove-button {
-    align-self: flex-end;
+  .cart-actions {
     margin-top: 10px;
+    width: 100%; /* Full width for mobile */
   }
 
-  .cart-actions {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 15px;
+  .btn-proceed,
+  .btn-shop {
+    width: 100%; /* Full width for buttons on mobile */
+    margin-top: 10px; /* Space below buttons */
+    margin-bottom: 50px; /* Space below buttons for mobile */
+    padding: 8px;
+    font-size: 0.9em;
+    display: block; /* Ensure they are block elements */
+  }
+
+  .empty-cart {
+    padding: 10px;
   }
 }
 
@@ -165,94 +214,5 @@
 @media (min-width: 1025px) {
   .cart-item {
     max-width: 100%;
-  }
-}
-
-.dark-mode .sidebar {
-  background-color: #333;
-  color: #fff;
-}
-
-.dark-mode .cart-item {
-  background-color: #333;
-  color: #fff;
-}
-
-.dark-mode .remove-button {
-  background-color: #ff5c5c;
-}
-
-
-
-
-
-
-
-@media (max-width: 767px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    border-radius: 0;
-    border-bottom: 1px solid #ddd;
-    width: 100%; 
-  }
-
-  .cart-item-details {
-    margin-left: 5px; 
-  }
-
-  .item-title {
-    font-size: 1em; 
-  }
-
-  .item-quantity-price {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 5px; 
-  }
-
-  .item-price {
-    font-size: 0.9em; 
-  }
-
-  .remove-button {
-    width: 25px; 
-    height: 25px;
-    align-self: flex-end;
-    margin-top: 5px;
-  }
-
-  .subtotal {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .subtotal span {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .cart-actions {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 10px; 
-  }
-
-  .btn-proceed, .btn-shop {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px; 
-    font-size: 0.9em; 
-  }
-
-  .empty-cart {
-    padding: 10px; 
   }
 }
