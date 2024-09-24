@@ -279,3 +279,112 @@
     margin-bottom: 50px;
   }
 }
+
+
+
+
+/* General Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px; /* Default width for large screens */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Initially hide the sidebar */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show the sidebar when open */
+}
+
+/* Dark mode sidebar styles */
+.dark-mode .sidebar {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Adjusting Sidebar for Mobile Screens */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 80%; /* Reduce sidebar width to 80% on mobile */
+    max-width: 320px; /* Ensure it doesn’t exceed 320px */
+    transform: translateX(100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .close-btn {
+    font-size: 24px; /* Larger close button for mobile */
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .cart-item-details {
+    margin-left: 0;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px; /* Added padding for better spacing */
+  }
+
+  .btn-proceed,
+  .btn-shop {
+    width: 100%; /* Full width for buttons on mobile */
+    padding: 12px;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+}
+
+/* Sidebar on tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 350px;
+  }
+
+  .cart-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .item-quantity-price {
+    flex-wrap: wrap;
+  }
+}
+
+/* Sidebar on large screens */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 400px;
+  }
+
+  .cart-item {
+    max-width: 100%;
+  }
+}
