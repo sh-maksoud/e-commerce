@@ -1,0 +1,91 @@
+
+.payment-options-page {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .payment-options-summary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .payment-method h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .payment-method p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  
+  .payment-icon {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+  }
+  
+  .confirm-button {
+    background-color: #f7a600;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .confirm-button:hover {
+    background-color: #d6892a;
+    transform: scale(1.05);
+  }
+  
+  .confirm-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode .payment-options-page {
+    background-color: #121212;
+  }
+  
+  .dark-mode .payment-options-summary {
+    background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dark-mode .payment-method h3 {
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .payment-method p {
+    color: #b0b0b0;
+  }
+  
+  .dark-mode .confirm-button {
+    background-color: #f7a600;
+  }
+  
+  .dark-mode .confirm-button:hover {
+    background-color: #d6892a;
+  }
+  

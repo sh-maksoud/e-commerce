@@ -1,0 +1,33 @@
+.numbers {
+    background-color: #f7a600;
+    padding: 25px 0;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.numbers .row {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.numbers .col-md-3 {
+    flex: 0 0 23%; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
+}
+.numbers h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.numbers h6{
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Tajwal', sans-serif;
+}

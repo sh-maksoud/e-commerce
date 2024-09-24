@@ -1,0 +1,156 @@
+.product-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+}
+
+.breadcrumb-container {
+  background-color: #F9F1E7;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 50px;
+}
+
+.thumbnail-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail-images img {
+  width: 70px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.main-image {
+  width: 400px;
+  height: auto;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.product-info {
+  flex: 2;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.ratings {
+  margin: 10px 0;
+}
+
+.ratings span {
+  font-size: 18px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.quantity-control button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-cart {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+}
+
+.add-cart:hover {
+  background-color: #f7a600;
+  color: #fff;
+  border: 1px solid #f7a600;
+}
+
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-images {
+    margin-right: 0;
+  }
+
+  .product-info {
+    text-align: center;
+  }
+}
+
+.dark-mode .product-page {
+  background-color: #121212;  
+  color: #e0e0e0;  
+}
+
+.dark-mode .breadcrumb-container {
+  background-color: #1e1e1e;  
+  border-bottom: 1px solid #444;  
+}
+
+.dark-mode .product-images .main-image,
+.dark-mode .thumbnail-images img {
+  border: 1px solid #444;  
+}
+
+.dark-mode .price {
+  color: #f7a600;  
+}
+
+.dark-mode .ratings span {
+  color: #f7a600;  
+}
+
+.dark-mode .product-info h1,
+.dark-mode .product-info p {
+  color: #e0e0e0; 
+}
+
+.dark-mode .quantity-control button {
+  background-color: #333;  
+  color: #e0e0e0;  
+  border: 1px solid #444;  
+}
+
+.dark-mode .add-cart {
+  background-color: #333;  
+  color: #e0e0e0;  
+  border: 1px solid #444;  
+}
+
+.dark-mode .add-cart:hover {
+  background-color: #f7a600;  
+  color: #fff;  
+  border: 1px solid #f7a600;  
+}

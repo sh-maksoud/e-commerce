@@ -1,0 +1,48 @@
+.user-profile {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .user-profile h1 {
+    text-align: center;
+  }
+  
+  .user-profile form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-profile form div {
+    margin-bottom: 15px;
+  }
+  
+  .user-profile label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .user-profile input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .user-profile button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .user-profile button:hover {
+    background-color: #0056b3;
+  }
+  
+  .user-profile .error {
+    color: red;
+    margin-top: 10px;
+  }
+  

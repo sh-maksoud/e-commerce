@@ -1,0 +1,181 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.auth-form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a049;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .already-member {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .already-member a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .already-member a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  .separator span {
+    background-color: #f7f7f7;
+    padding: 0 10px;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 10px;
+  }
+  
+  .oauth-buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .oauth-buttons .btn-google {
+    background-color: #db4437;
+    color: white;
+  }
+  
+  .oauth-buttons .btn-google:hover {
+    background-color: #c5362b;
+  }
+  
+  .oauth-buttons .btn-microsoft {
+    background-color: #0078d4;
+    color: white;
+  }
+  
+  .oauth-buttons .btn-microsoft:hover {
+    background-color: #005ea6;
+  }
+  
+  .oauth-buttons .btn-apple {
+    background-color: #000;
+    color: white;
+  }
+  
+  .oauth-buttons .btn-apple:hover {
+    background-color: #333;
+  }
+  
+  .btn-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background-color: #d32f2f;
+  }
+  
+
+
+
+
+.auth-form {
+  background-color: #fff;
+  color: #333;
+}
+
+.auth-form.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.separator span {
+  color: #666;
+}
+
+.auth-form.dark-mode .separator span {
+  color: #888;
+}
+
+.auth-form.dark-mode .btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+

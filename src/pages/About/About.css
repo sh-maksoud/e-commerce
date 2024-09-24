@@ -1,0 +1,151 @@
+
+.about-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    color: #333;
+  }
+  
+  .hero {
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+  }
+  
+  .overview, .mission, .milestones, .team {
+    margin: 60px 0;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .milestones-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .milestone {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .milestone h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff8c00;
+  }
+  
+  .team-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .about-footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+  }
+  
+
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    
+  }
+  .social-icons a:hover {
+    color: #f7a600;
+  }
+  
+
+
+
+body.dark-mode {
+  background-color: #222; 
+  color: #eee; 
+}
+
+body.dark-mode .hero {
+  background-color: #333; 
+  color: #fff;
+}
+
+body.dark-mode .milestone {
+  background-color: #444; 
+  color: #fff;
+}
+
+body.dark-mode .milestone h3 {
+  color: #f7a600; 
+}
+
+body.dark-mode .team-member h3 {
+  color: #f7a600;
+}
+
+body.dark-mode .team-member p {
+  color: #ccc; 
+}
+
+body.dark-mode .social-icons a {
+  color: #ccc;
+}
+
+body.dark-mode .social-icons a:hover {
+  color: #f7a600; 
+}

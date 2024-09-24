@@ -1,0 +1,80 @@
+.return-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9; 
+  border-radius: 8px;
+}
+
+.dark-mode .return-page {
+  background-color: #2c2c2c; 
+}
+
+.return-page h1 {
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.dark-mode .return-page h1 {
+  color: #e0e0e0;
+}
+
+.return-page .form-group {
+  margin-bottom: 15px;
+}
+
+.return-page .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666; 
+}
+
+.dark-mode .return-page .form-group label {
+  color: #c0c0c0;
+}
+
+.return-page .form-group input,
+.return-page .form-group select,
+.return-page .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd; 
+  border-radius: 4px;
+  background-color: #fff; 
+  color: #333; 
+}
+
+
+.dark-mode .return-page .form-group input,
+.dark-mode .return-page .form-group select,
+.dark-mode .return-page .form-group textarea {
+  background-color: #3c3c3c;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+.return-page .form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.return-page .submit-button {
+  background-color: #f7a600;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dark-mode .return-page .submit-button {
+  background-color: #f7a600;
+  border: none;
+  color: white;
+}
+
+.dark-mode .return-page .submit-button:hover {
+  background-color: #d6892a;
+}
