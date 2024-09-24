@@ -163,13 +163,13 @@ function App() {
               <Route path="Shop/:category" element={<Shop />} />
               <Route path="Shop/:category/:id" element={<SingleProduct />} />
               <Route path="product/:id" element={<SingleProduct />} />
-              <Route path="contact" element={<Contact />} />
+              <Route path="Contact" element={<Contact />} />
               <Route path="cart" element={<Cart />} />
               <Route path="checkout" element={<Checkout />} />
-              <Route path="payment" element={<PaymentOptions />} />
-              <Route path="returns" element={<Return />} />
-              <Route path="privacy" element={<PrivacyPolicy />} />
-              <Route path="about" element={<About />} />
+              <Route path="PaymentOptions" element={<PaymentOptions />} />
+              <Route path="Return" element={<Return />} />
+              <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
+              <Route path="About" element={<About />} />
               
               {/* Authentication Routes */}
               <Route path="login" element={<Login />} />
