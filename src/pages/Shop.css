@@ -304,6 +304,10 @@ h1 {
     border-radius: 4px; /* Maintain the same border radius */
     margin-bottom: 50%;
   }
+  .product-item .add-to-cart {
+    margin-bottom: 50%;
+
+  }
   
   /* Adjusting the visibility of the Add to Cart button on hover */
   .product-item:hover .add-to-cart {
