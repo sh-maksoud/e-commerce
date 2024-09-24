@@ -55,10 +55,71 @@ import './footer.css';
 
 
 
+// import { Link } from 'react-router-dom';
+// import './footer.css';
+
+// const Footer = () => {
+//   return (
+//     <footer className="footer">
+//       <div className="footer-content">
+//         <div className="footer-info">
+//           <span className="footer-logo">TrendElite.</span>
+//           <p className="footer-address">
+//             400 University Drive Suite 200 Coral<br />
+//             Gables, FL 33134 USA
+//           </p>
+//         </div>
+        
+//         <nav className="footer-nav">
+//           <ul className="footer-nav-list">
+//             <li>Links</li>
+//             <li className="footer-nav-item"><Link to="/">Home</Link></li>
+//             <li className="footer-nav-item"><Link to="/shop">Shop</Link></li>
+//             <li className="footer-nav-item"><Link to="/about">About</Link></li>
+//             <li className="footer-nav-item"><Link to="/contact">Contact</Link></li>
+//           </ul>
+          
+//           <ul className="footer-nav-list">
+//             <li>Help</li>
+//             <li className="footer-nav-item"><Link to="/payment">Payment Options</Link></li>
+//             <li className="footer-nav-item"><Link to="/returns">Returns</Link></li>
+//             <li className="footer-nav-item"><Link to="/privacy">Privacy Policies</Link></li>
+//           </ul>
+//         </nav>
+        
+//         <div className="footer-newsletter">
+//           <strong>Newsletter</strong>
+//           <form className="newsletter-form">
+//             <input type="email" placeholder="Enter Your Email Address" className="newsletter-input" required />
+//             <button type="submit" className="newsletter-button">Subscribe</button>
+//           </form>
+//         </div>
+//       </div>
+      
+//       <hr className="footer-divider" />
+//       <p className="footer-rights">© 2023 <Link className="footer-link" to="/">TrendElite</Link> . All rights reserved.</p>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
+
+
+
+
+
+
 import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
+
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -73,17 +134,31 @@ const Footer = () => {
         <nav className="footer-nav">
           <ul className="footer-nav-list">
             <li>Links</li>
-            <li className="footer-nav-item"><Link to="/">Home</Link></li>
-            <li className="footer-nav-item"><Link to="/shop">Shop</Link></li>
-            <li className="footer-nav-item"><Link to="/about">About</Link></li>
-            <li className="footer-nav-item"><Link to="/contact">Contact</Link></li>
+            <li className="footer-nav-item">
+              <Link to="/" onClick={scrollToTop}>Home</Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link to="/shop" onClick={scrollToTop}>Shop</Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link to="/about" onClick={scrollToTop}>About</Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link to="/contact" onClick={scrollToTop}>Contact</Link>
+            </li>
           </ul>
           
           <ul className="footer-nav-list">
             <li>Help</li>
-            <li className="footer-nav-item"><Link to="/payment">Payment Options</Link></li>
-            <li className="footer-nav-item"><Link to="/returns">Returns</Link></li>
-            <li className="footer-nav-item"><Link to="/privacy">Privacy Policies</Link></li>
+            <li className="footer-nav-item">
+              <Link to="/payment" onClick={scrollToTop}>Payment Options</Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link to="/returns" onClick={scrollToTop}>Returns</Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link to="/privacy" onClick={scrollToTop}>Privacy Policies</Link>
+            </li>
           </ul>
         </nav>
         
@@ -97,7 +172,7 @@ const Footer = () => {
       </div>
       
       <hr className="footer-divider" />
-      <p className="footer-rights">© 2023 <Link className="footer-link" to="/">TrendElite</Link> . All rights reserved.</p>
+      <p className="footer-rights">© 2023 <Link className="footer-link" to="/" onClick={scrollToTop}>TrendElite</Link> . All rights reserved.</p>
     </footer>
   );
 };
