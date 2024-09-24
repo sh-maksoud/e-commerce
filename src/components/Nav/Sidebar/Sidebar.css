@@ -216,3 +216,66 @@
     max-width: 100%;
   }
 }
+
+
+
+.btn-go-cart {
+  flex: 1; /* Flex to allow responsiveness */
+  padding: 10px;
+  margin: 5px; /* Adjusted margin for spacing between buttons */
+  text-align: center;
+  background-color: #ff5733; /* Vibrant orange color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  height: 40px; /* Fixed height for buttons */
+}
+
+.btn-go-cart:hover {
+  background-color: #c70000; /* Darker red/orange for hover state */
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .btn-go-cart {
+    width: 100%; /* Full width for better touch target on small screens */
+    padding: 12px; /* More padding for better touch targets */
+    font-size: 1em; /* Adjust font size for mobile */
+    background-color: #ff6f47; /* Slightly lighter orange for mobile */
+    /* margin: 10px 0;  */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-go-cart {
+    padding: 10px;
+    font-size: 1em; /* Regular size for medium screens */
+  }
+}
+
+@media (min-width: 1025px) {
+  .btn-go-cart {
+    padding: 10px;
+    font-size: 1.1em; /* Larger font size for larger screens */
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .btn-go-cart {
+    width: 100%;
+    padding: 14px;
+    font-size: 1em;
+    background-color: #ff6f47;
+  }
+
+  .btn-go-cart:hover {
+    background-color: #c70000;
+  }
+  .cart-actions {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
