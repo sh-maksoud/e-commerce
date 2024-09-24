@@ -159,9 +159,9 @@ function App() {
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route path="shop" element={<Shop />} />
-              <Route path="shop/:category" element={<Shop />} />
-              <Route path="shop/:category/:id" element={<SingleProduct />} />
+              <Route path="Shop" element={<Shop />} />
+              <Route path="Shop/:category" element={<Shop />} />
+              <Route path="Shop/:category/:id" element={<SingleProduct />} />
               <Route path="product/:id" element={<SingleProduct />} />
               <Route path="contact" element={<Contact />} />
               <Route path="cart" element={<Cart />} />
