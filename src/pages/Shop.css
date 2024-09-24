@@ -100,8 +100,8 @@ h1 {
 .product-item h2,
 .product-item p,
 .product-item .add-to-cart {
-  position: relative;
-  z-index: 2;
+      z-index: 2;
+      margin-bottom: 50%;
 }
 
 .product-item h2 {

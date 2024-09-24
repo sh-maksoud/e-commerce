@@ -60,9 +60,10 @@ const Shop = () => {
     window.history.pushState(null, '', `/shop/${encodedCategory}`);
   };
 
-  // Change the page number
+  // Change the page number and scroll to top
   const handlePageChange = (page) => {
     setCurrentPage(page);
+    window.scrollTo(0, 0);
   };
 
   // Add product to cart
@@ -136,5 +137,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
-
