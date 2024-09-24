@@ -42,7 +42,6 @@
   margin-top: 150px;
 }
 
-/* Dark mode styles */
 .dark-mode .cart-logo {
   filter: brightness(0) invert(1); 
 }

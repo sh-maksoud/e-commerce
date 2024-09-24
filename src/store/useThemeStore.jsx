@@ -1,18 +1,6 @@
-// import { create } from 'zustand';
-
-// const useThemeStore = create((set) => ({
-//   isDarkMode: false,
-//   toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
-// }));
-
-// export default useThemeStore;
-
-
-
 
 import { create } from 'zustand';
 
-// Create Zustand store for theme management
 const useThemeStore = create((set) => ({
   // Initialize with localStorage value or default to false
   isDarkMode: localStorage.getItem('theme') === 'dark',

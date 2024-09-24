@@ -95,7 +95,6 @@ const Nav = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // Create a ref to detect clicks outside the navigation menu
   const navRef = useRef();
 
   const handleLogout = async () => {
@@ -114,7 +113,6 @@ const Nav = () => {
     setIsNavOpen(prev => !prev);
   };
 
-  // Close the mobile menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -122,14 +120,12 @@ const Nav = () => {
       }
     };
 
-    // Add event listener when the menu is open
     if (isNavOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
 
-    // Cleanup event listener when component unmounts or menu closes
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };

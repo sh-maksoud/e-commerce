@@ -1,4 +1,3 @@
-// utils.js
 export const calculateTotal = (cartData) => {
     if (!cartData) return 0;
     return cartData.products.reduce((total, item) => {
