@@ -1,3 +1,4 @@
+
 .sidebar {
   position: absolute; 
   top: 80px;
@@ -15,6 +16,7 @@
   pointer-events: none; 
 }
 
+
 .sidebar.open {
   transform: translateX(0);
   opacity: 1;
@@ -22,6 +24,7 @@
   height: 100vh;
   text-align: center;
 }
+
 
 .cart-item {
   display: flex; 
@@ -45,6 +48,7 @@
   flex-direction: column;
   margin-left: 10px;
 }
+
 
 .item-title {
   font-weight: bold;
@@ -76,15 +80,12 @@
   text-align: center;
 }
 
-.quantity-dropdown:hover {
-  border-color: #aaa;
-}
-
 .item-price {
   font-weight: bold;
-  color: #28a745;
+  color: #28a745; 
   min-width: 80px; 
 }
+
 
 .remove-button {
   width: 30px;
@@ -104,13 +105,43 @@
   transform: scale(1.1); 
 }
 
-/* Subtotal Styles */
+
+.dark-mode .sidebar {
+  background-color: #2c2c2c; 
+  color: #fff;
+}
+
+.dark-mode .cart-item {
+  background-color: #444; 
+}
+
+.dark-mode .item-title {
+  color: #fff;
+}
+
+.dark-mode .item-price {
+  color: #76c7c0; 
+}
+
+.dark-mode .cart-item:hover {
+  background-color: #555;
+}
+
+.dark-mode .btn-proceed,
+.dark-mode .btn-shop,
+.dark-mode .btn-go-cart {
+  background-color: #f7a600; 
+  color: #fff; 
+}
+
+
 .subtotal {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
   margin-top: 20px;
   border-top: 1px solid #ddd;
+  gap: 20px;
 }
 
 .cart-actions {
@@ -120,6 +151,7 @@
   margin-top: 20px;
   flex-wrap: wrap; 
 }
+
 
 .btn-proceed,
 .btn-shop,
@@ -144,6 +176,7 @@
   background-color: #e69500;
 }
 
+
 .close-btn {
   background: none;
   border: none;
@@ -154,6 +187,7 @@
   color: #333;
   transition: color 0.3s ease;
 }
+
 
 .empty-cart {
   text-align: center;
