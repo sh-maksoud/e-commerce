@@ -186,3 +186,9 @@
 .dark-mode .cart-item-details p {
   color: #e0e0e0;
 }
+.dark-mode .btn-proceed,
+.dark-mode .btn-shop,
+.dark-mode .btn-go-cart {
+  background-color: #e69500;
+  color: #fff;
+}
