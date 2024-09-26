@@ -9,7 +9,7 @@ import './Sidebar.css';
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar, cart, removeFromCart, updateQuantity } = useStore();
   const [closeTimeout, setCloseTimeout] = useState(null);
-  const sidebarRef = useRef(null);
+  const sidebarRef = useRef(null); 
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(isSidebarOpen);
@@ -39,6 +39,13 @@ const Sidebar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isSidebarOpen, closeSidebar]);
+
+ 
+  useEffect(() => {
+    if (sidebarRef.current) {
+      sidebarRef.current.scrollTop = 0;  
+    }
+  }, [cart]);  
 
   const handleMouseLeave = () => {
     const timeoutId = setTimeout(() => {
@@ -80,7 +87,7 @@ const Sidebar = () => {
     isVisible && (
       <div
         className={`sidebar ${isSidebarOpen ? 'open' : ''} ${isHovered ? 'hovered' : ''}`}
-        ref={sidebarRef}
+        ref={sidebarRef}  
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -95,7 +102,8 @@ const Sidebar = () => {
           </div>
         ) : (
           <div className="cart-items">
-            {cart.map((item) => (
+           
+            {cart.slice().reverse().map((item) => (
               <div key={item.id} className="cart-item">
                 <img src={item.image} alt={item.title} className="cart-item-image" />
                 <div className="cart-item-details">
