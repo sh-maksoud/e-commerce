@@ -51,7 +51,7 @@ const Footer = () => {
         </nav>
         
         <div className="footer-newsletter">
-          <strong>Newsletter</strong>
+          <p className="footer-newsletter-title">Newsletter</p>
           <form className="newsletter-form">
             <input type="email" placeholder="Enter Your Email Address" className="newsletter-input" required />
             <button type="submit" className="newsletter-button">Subscribe</button>

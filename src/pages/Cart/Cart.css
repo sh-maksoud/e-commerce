@@ -69,6 +69,7 @@
 .cart-items {
   flex: 3;
   padding-right: 20px;
+  margin: 20px;
 }
 
 .dark-mode .cart-items {
@@ -132,6 +133,14 @@
   border-radius: 4px;
   transition: background-color 0.3s;
 }
+.back-to-shop-button {
+  border: none;
+  color: #d6892a;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
 .dark-mode .cart-remove {
   background-color: #ffb600; 
@@ -149,6 +158,7 @@
   flex: 1;
   max-width: 300px;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 .dark-mode .cart-summary {
@@ -212,7 +222,7 @@
   .cart-summary {
     max-width: 100%;  
     padding-left: 0;
-    margin-top: 20px;  
+    margin: 20px;  
   }
 
   .cart-table {
@@ -260,6 +270,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 20px;
   }
 
   .checkout-button {
@@ -282,13 +293,17 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-right: 10px;
   }
 
   .cart-table thead {
     flex: 1;
-    min-width: 120px;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
   }
 
   .cart-table tbody {
@@ -338,7 +353,7 @@
 
 .cart-table th {
   background-color: #f0f0f0; 
-  height: 100px;  
+  /* height: 100px;   */
 }
 
 .cart-table td {
@@ -404,6 +419,8 @@
   .cart-table tr {
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
+
   }
 
   .cart-table td {
@@ -418,12 +435,14 @@
 .cart-table {
   width: 100%;
   border-collapse: collapse;
+  margin: 20px;
+  padding: 20px;
 }
 
 .cart-table th,
 .cart-table td {
   padding: 15px; 
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
@@ -435,6 +454,8 @@
   .cart-table {
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    padding: 20px;
   }
 
   .cart-table thead,

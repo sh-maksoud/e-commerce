@@ -1,9 +1,17 @@
 
+
+
+
+
+
+
+
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useStore from '../store/useStore';
 import './Shop.css';
 import logo from '../../src/assets/logo.png';
+import { FaShareAlt } from 'react-icons/fa'; 
 
 const ITEMS_PER_PAGE = 10;
 
@@ -23,7 +31,6 @@ const Shop = () => {
   const [error, setError] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(category || 'all');
 
-  // Fetch products and categories on mount
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -33,43 +40,51 @@ const Shop = () => {
         setError('Failed to load data');
       }
     };
-
     loadData();
   }, [fetchProducts, fetchCategories]);
 
-  // Filter products based on selected category
   useEffect(() => {
     const normalizedCategory = decodeURIComponent(selectedCategory).replace(/-/g, ' ');
     const filtered = normalizedCategory === 'all'
       ? products
-      : products.filter(product => product.category === normalizedCategory);
+      : products.filter((product) => product.category === normalizedCategory);
 
     setFilteredProducts(filtered);
     setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
-
-    // Scroll to top when category changes
     window.scrollTo(0, 0);
   }, [products, selectedCategory]);
 
-  // Change category and update URL
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
     const encodedCategory = encodeURIComponent(category);
-    // Update the URL without reloading the page
     window.history.pushState(null, '', `/shop/${encodedCategory}`);
   };
 
-  // Change the page number and scroll to top
   const handlePageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
 
-  // Add product to cart
   const handleAddToCart = (event, product) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     addToCart(product);
+  };
+
+  const handleShare = (event, product) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    const productUrl = `${window.location.origin}/product/${product.id}`;
+    if (navigator.share) {
+      navigator.share({
+        title: product.title,
+        url: productUrl
+      }).catch((error) => console.error('Sharing failed:', error));
+    } else {
+      // Fallback for non-supporting browsers (e.g., desktop)
+      alert(`Share this product: ${productUrl}`);
+    }
   };
 
   if (error) return <p>{error}</p>;
@@ -88,9 +103,18 @@ const Shop = () => {
       </div>
       <h1>Shop Our Collection</h1>
       <div className="category-filters">
-        <button onClick={() => handleCategoryChange('all')}>All</button>
+        <button
+          className={selectedCategory === 'all' ? 'active' : ''}
+          onClick={() => handleCategoryChange('all')}
+        >
+          All
+        </button>
         {categories.map((cat, index) => (
-          <button key={index} onClick={() => handleCategoryChange(cat)}>
+          <button
+            key={index}
+            className={selectedCategory === cat ? 'active' : ''}
+            onClick={() => handleCategoryChange(cat)}
+          >
             {cat}
           </button>
         ))}
@@ -111,6 +135,13 @@ const Shop = () => {
               onClick={(event) => handleAddToCart(event, product)}
             >
               Add to Cart
+            </button>
+            <button
+              className="share-button"
+              onClick={(event) => handleShare(event, product)}
+              aria-label="Share Product"
+            >
+              <FaShareAlt />
             </button>
           </div>
         ))}

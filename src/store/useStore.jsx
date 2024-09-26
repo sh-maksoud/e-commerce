@@ -1,4 +1,5 @@
 
+
 import { create } from 'zustand';
 
 const useStore = create((set) => ({
@@ -29,11 +30,16 @@ const useStore = create((set) => ({
     }
   }),
 
-   removeFromCart: (id) => set((state) => ({
+  removeFromCart: (id) => set((state) => ({
     cart: state.cart.filter(item => item.id !== id),
   })),
 
-   
+  updateQuantity: (id, quantity) => set((state) => ({
+    cart: state.cart.map(item =>
+      item.id === id ? { ...item, quantity } : item
+    ),
+  })),
+
   fetchProducts: async () => {
     try {
       const response = await fetch('https://fakestoreapi.com/products');
@@ -45,7 +51,7 @@ const useStore = create((set) => ({
     }
   },
 
-   fetchCategories: async () => {
+  fetchCategories: async () => {
     try {
       const response = await fetch('https://fakestoreapi.com/products/categories');
       if (!response.ok) throw new Error('Failed to fetch categories');
@@ -56,13 +62,17 @@ const useStore = create((set) => ({
     }
   },
 
-   toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
+  toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
 
-   toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+  toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
   openSidebar: () => set({ isSidebarOpen: true }),
-  closeSidebar: () => {
-     set({ isSidebarOpen: false });
-  },
+  closeSidebar: () => set({ isSidebarOpen: false }),
 }));
 
 export default useStore;
+
+
+
+
+
+
