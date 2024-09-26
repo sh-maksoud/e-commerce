@@ -1,5 +1,7 @@
 
 
+
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import useStore from '../../../store/useStore';
@@ -40,12 +42,11 @@ const Sidebar = () => {
     };
   }, [isSidebarOpen, closeSidebar]);
 
- 
   useEffect(() => {
     if (sidebarRef.current) {
       sidebarRef.current.scrollTop = 0;  
     }
-  }, [cart]);  
+  }, [cart]);
 
   const handleMouseLeave = () => {
     const timeoutId = setTimeout(() => {
@@ -67,6 +68,7 @@ const Sidebar = () => {
   const handleGoToCart = () => {
     closeSidebar();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/cart'); 
   };
 
   const handleCheckout = () => {
@@ -102,7 +104,6 @@ const Sidebar = () => {
           </div>
         ) : (
           <div className="cart-items">
-           
             {cart.slice().reverse().map((item) => (
               <div key={item.id} className="cart-item">
                 <img src={item.image} alt={item.title} className="cart-item-image" />
