@@ -144,7 +144,10 @@
   height: auto;
   margin-top: 10px;
 }
+.dark-mode .cart-item-details p {
+  color: #333;
 
+}
 
 @media (max-width: 768px) {
   .sidebar {
@@ -175,4 +178,11 @@
     top: 10px;
     right: 10px;
   }
+}
+.dark-mode .cart-item{
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+.dark-mode .cart-item-details p {
+  color: #e0e0e0;
 }

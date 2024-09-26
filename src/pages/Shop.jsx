@@ -9,6 +9,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useStore from '../store/useStore';
+// import useauth from '../hooks/useauth';
 import './Shop.css';
 import logo from '../../src/assets/logo.png';
 import { FaShareAlt } from 'react-icons/fa'; 
